@@ -1,0 +1,53 @@
+<! DOCTYPE html>
+<html lang="en"> 
+<head> 
+	<title> Web Development | Single Page</title>
+	<meta charset="UTF-8"
+	<meta name="viewport" content="width=device-width, initial- scale=1.0"/>
+	<link href="css/icono.min.css" rel="stylesheet"  type="text/css" />
+	<link href="css/object.css" rel="stylesheet"  type="text/css" />
+	<link href="css/all.min.css" rel="stylesheet"  type="text/css" />
+	<title> Website </title>
+	<style>
+	#container{width:500px;height:500px;background-color:red;position:absolute;right:50%;}
+	  #screen{width:200px; height:200px;background-color:skyblue;margin:70px 150px;border-radius:20px;padding:15px;}
+	  button{background-color:grey;margin:5px 45px;border: 1px solid red;}
+	.userinput{float:left;margin:10px 40px;} 
+	#userinput1{width:150px;height:30px;border-radius:4px;border: 1px solid white;}
+	#userinput{width:150px;height:30px;border-radius:4px;border: 1px solid white;}
+	</style>
+<head/>
+
+<body>
+ <div id="container">
+   <div id="screen">
+	  <h3"></h3>
+	</div>
+	
+	<div class="userinput">
+	  <input id="userinput1" type="text" placeholder="Please enter youe name"/><br/>
+	  <button id="btn1" onclick="move();">Move</button>
+	</div>
+	
+	
+	<div class="userinput">
+	  <input id="userinput" type="text" "/><br/>
+	  <button id="btn1" onclick="show();">show</button>
+	</div>
+ </div>
+<script>
+  function move(){
+	var move = document.getElementById('userinput1').value
+	document.getElementById('userinput').value = move
+	document.getElementById('userinput1').value = '';
+}
+
+function show(){
+	var show = document.getElementById('userinput').value
+	document.getElementById('screen').innerHTML = show
+	document.getElementById('userinput').value = '';
+}
+
+</script> 
+</body>
+</html>	
